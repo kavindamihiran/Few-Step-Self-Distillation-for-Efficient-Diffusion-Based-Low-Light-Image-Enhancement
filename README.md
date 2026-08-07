@@ -17,6 +17,15 @@ experiment results.
 - `figures/`: diagnostic visualizations and model-output examples.
 - `docs/`: dataset, checkpoint, and reproducibility notes.
 
+## Qualitative Example
+
+The following three LOL-v2 Real examples were regenerated with the released
+`student_distilled_2291.pth` checkpoint using five-step DDIM inference. The
+first row uses `low00700.png`; each row shows the low-light input, FSD student
+output, and paired ground truth.
+
+![Five-step FSD qualitative examples on LOL-v2 Real](figures/figure1_teaser_student_multi_exact_2291_low00700.png)
+
 ## Installation
 
 ```bash
