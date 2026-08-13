@@ -4,6 +4,15 @@ This repository contains the LUMIDIFF residual-diffusion model, five-step
 self-distillation code, evaluation scripts, validated manifests, and compact
 experiment results.
 
+## What FSD changes
+
+FSD uses a frozen residual-diffusion teacher to generate refined training
+targets for a same-architecture student. This adds computation during
+training; it does not accelerate training itself. At deployment, the teacher
+is removed and the student runs alone at five fixed DDIM states. The purpose
+of distillation is therefore to improve restoration quality within the fixed
+five-evaluation inference budget, without increasing the deployed model size.
+
 ## Repository layout
 
 - Root Python files: model, diffusion process, dataset loader, training, distillation, and evaluation code.
